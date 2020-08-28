@@ -15,8 +15,6 @@ export default function Home() {
     {key: '4', tipo: 'receita', valor: 89.62},
     {key: '5', tipo: 'despesa', valor: 500},
     {key: '6', tipo: 'despesa', valor: 310},
-    {key: '7', tipo: 'despesa', valor: 380},
-    {key: '8', tipo: 'despesa', valor: 390},
   ]);
 
   const {user} = useContext(AuthContext);
@@ -25,7 +23,7 @@ export default function Home() {
     <Background>
       <Header />
       <Container>
-        <Nome>Laérth</Nome>
+        <Nome>{user && user.nome}</Nome>
         <Saldo>R$ 123,00</Saldo>
       </Container>
 
