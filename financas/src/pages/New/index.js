@@ -18,7 +18,7 @@ export default function New() {
   const navigation = useNavigation();
 
   const [valor, setValor] = useState('');
-  const [tipo, setTipo] = useState(null);
+  const [tipo, setTipo] = useState('receita');
   const {user: usuario} = useContext(AuthContext);
 
   function handleSubmit() {
@@ -90,7 +90,7 @@ export default function New() {
             onChangeText={(text) => setValor(text)}
           />
 
-          <Picker onChange={setTipo} />
+          <Picker onChange={setTipo} tipo={tipo} />
 
           <SubmitButton onPress={handleSubmit}>
             <SubmitText>Registrar</SubmitText>
